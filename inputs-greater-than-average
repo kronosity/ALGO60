@@ -1,0 +1,31 @@
+Comment 
+Input: An integer, listlen, where listlen is less than 100, followed by listlen-integer values
+Output: The number of input values that are greater than the average of all the input values ;
+
+begin 
+  integer array intlist [1:99];
+  integer listlen, counter, sum, average, result;
+  sum := 0;
+  result := 0;
+  readint (listlen);
+  
+  if(listlen > 0) ^ (listlen < 100) then
+    begin
+      for counter := 1 step 1 until listlen do
+        begin
+          readint (intlist[counter]);
+            sum := sum + sum + intlist[counter]
+              end;
+              
+    average := sum/listlen;
+    
+    for counter := 1 step 1 until listlen do  
+      if intlist[counter] > average
+        then result := result + 1;
+        
+    printstring("The number of values > average is:");
+    printinto (result)
+    end   
+      else
+    printstring("Err list length is illegal ");
+ end   
